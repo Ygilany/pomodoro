@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
@@ -10,7 +10,7 @@ using Plugin.Connectivity;
 
 using Pomodoro.Models;
 
-namespace Pomodoro
+namespace Pomodoro.Services.DataStore
 {
     public class CloudDataStore : IDataStore<Item>
     {

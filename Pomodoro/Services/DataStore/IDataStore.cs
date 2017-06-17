@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Pomodoro
+namespace Pomodoro.Services.DataStore
 {
     public interface IDataStore<T>
     {

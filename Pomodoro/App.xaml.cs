@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 
 using Xamarin.Forms;
+
 using Pomodoro.Views;
+using Pomodoro.Services.DataStore;
 
 namespace Pomodoro
 {

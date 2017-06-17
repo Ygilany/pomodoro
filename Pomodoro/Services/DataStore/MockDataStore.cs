@@ -1,11 +1,11 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 using Pomodoro.Models;
 
-namespace Pomodoro
+namespace Pomodoro.Services.DataStore
 {
     public class MockDataStore : IDataStore<Item>
     {

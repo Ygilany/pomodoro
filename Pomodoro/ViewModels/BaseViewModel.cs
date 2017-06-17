@@ -1,6 +1,6 @@
-﻿using Xamarin.Forms;
+﻿﻿using Xamarin.Forms;
 
-namespace Pomodoro
+namespace Pomodoro.ViewModels
 {
     public class BaseViewModel : ObservableObject
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Pomodoro.ViewModels;
 
 namespace Pomodoro
 {

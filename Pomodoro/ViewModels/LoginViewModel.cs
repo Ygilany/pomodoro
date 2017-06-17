@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 using Xamarin.Forms;
 
-namespace Pomodoro
+namespace Pomodoro.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {

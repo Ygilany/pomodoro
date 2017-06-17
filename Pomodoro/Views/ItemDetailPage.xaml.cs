@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Pomodoro.ViewModels;
 
-namespace Pomodoro
+namespace Pomodoro.Views
 {
     public partial class ItemDetailPage : ContentPage
     {

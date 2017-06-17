@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace Pomodoro
+namespace Pomodoro.Views
 {
     public partial class NewItemPage : ContentPage
     {

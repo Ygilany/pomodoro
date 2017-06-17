@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
+using Pomodoro.Models;
+
 namespace Pomodoro.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel

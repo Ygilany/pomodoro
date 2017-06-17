@@ -3,7 +3,9 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+
 using Pomodoro.Views;
+using Pomodoro.Models;
 
 namespace Pomodoro.ViewModels
 {

@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace Pomodoro
+namespace Pomodoro.Models
 {
     public class Item : ObservableObject
     {

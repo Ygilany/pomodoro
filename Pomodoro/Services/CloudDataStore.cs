@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
 
+using Pomodoro.Models;
+
 namespace Pomodoro
 {
     public class CloudDataStore : IDataStore<Item>

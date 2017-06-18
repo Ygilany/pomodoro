@@ -8,19 +8,19 @@ namespace Pomodoro.Helpers
         Timer timer;
         int duration;
         int elapsedTime;
+        EventHandler OneSecondElapsedHandler;
 
 		public TimerHelper InitTimer(int duration, EventHandler e)
 		{
 			if (this.timer == null)
 			{
                 this.timer = new Timer((int)TimeUnitsInMillisecondsEnum.Second);
-                this.timer.Elapsed += new ElapsedEventHandler(e);
-				this.timer.Elapsed += new ElapsedEventHandler(this.Tick);
+				this.timer.Elapsed += this.Tick;
+				this.timer.AutoReset = true;
 			}
 
 			this.duration = duration;
-
-			this.timer.AutoReset = true;
+			this.OneSecondElapsedHandler = e;
 
             return this;
 		}
@@ -28,7 +28,7 @@ namespace Pomodoro.Helpers
         public void Tick(object O, EventArgs e)
         {
             elapsedTime++;
-
+            OneSecondElapsedHandler.Invoke(O, e);
 			if (elapsedTime > this.duration) {
 				this.StopTimer();
             }

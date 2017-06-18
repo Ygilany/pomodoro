@@ -140,6 +140,9 @@
     <BundleResource Include="Resources\xamarin_logo.png" />
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <BundleResource Include="Resources\tab_timer.png" />
+    <BundleResource Include="Resources\tab_timer%402x.png" />
+    <BundleResource Include="Resources\tab_timer%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

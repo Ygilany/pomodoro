@@ -59,6 +59,10 @@ namespace Pomodoro
             Current.MainPage = new TabbedPage
             {
                 Children = {
+                    new NavigationPage(new PomodoroPage()){
+                        Title = "Pomodoro",
+                        Icon = Device.RuntimePlatform.Equals(Device.iOS) ? "tab_timer.png" : null
+                    },
                     new NavigationPage(new ItemsPage())
                     {
                         Title = "Browse",

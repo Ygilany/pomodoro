@@ -48,6 +48,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\PomodoroPage.xaml.cs">
       <DependentUpon>PomodoroPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PomodoroViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />

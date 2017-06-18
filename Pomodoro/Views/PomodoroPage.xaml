@@ -28,6 +28,25 @@
                     AbsoluteLayout.LayoutFlags="PositionProportional"
                     WidthRequest="500"
                     Scale="1.5" />
+            <Image  x:Name="TimerToggleBtn"
+                    AbsoluteLayout.LayoutBounds="0,0,-1,-1"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Source="{Binding ToggledBtnImage}"
+                    Scale="0.5">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Command="{Binding TogglePomodoro}" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image  AbsoluteLayout.LayoutBounds="1,0,-1,-1"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Source="reset.png"
+                    Scale="0.5">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Command="{Binding TogglePomodoro}" />
+                </Image.GestureRecognizers>
+            </Image>
       </AbsoluteLayout>
 	</ContentPage.Content>
 </ContentPage>

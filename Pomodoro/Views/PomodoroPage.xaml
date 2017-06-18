@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Pomodoro.Views.PomodoroPage">
+	<ContentPage.Content>
+        <AbsoluteLayout>
+            <Label  x:Name="TaskName"
+                    Text="The Running Task"
+                    AbsoluteLayout.LayoutBounds="0.5,0.45,-1,-1"
+                    AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <ProgressBar x:Name="PomodoroProgressBar"
+                    Progress="0.5" 
+                    AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    WidthRequest="300" />
+            <Label  x:Name="PomodoroCounter"
+                    Text="0/3"
+                    AbsoluteLayout.LayoutBounds="0,1,-1,-1"
+                    AbsoluteLayout.LayoutFlags="PositionProportional" />
+            
+      </AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

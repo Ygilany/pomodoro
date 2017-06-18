@@ -16,7 +16,7 @@
                     WidthRequest="300" />
             <Label  x:Name="PomodoroCounter"
                     Text="0/3"
-                    AbsoluteLayout.LayoutBounds="0,1,-1,-1"
+                    AbsoluteLayout.LayoutBounds="0.055,0.97,-1,-1"
                     AbsoluteLayout.LayoutFlags="PositionProportional" />
             
       </AbsoluteLayout>

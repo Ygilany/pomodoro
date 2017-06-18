@@ -122,8 +122,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-72.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\NotificationIcon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\NotificationIcon%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\NotificationIcon~ipad.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\NotificationIcon~ipad%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\profile_generic.png" />
@@ -146,6 +167,7 @@
     <BundleResource Include="Resources\play.png" />
     <BundleResource Include="Resources\pause.png" />
     <BundleResource Include="Resources\reset.png" />
+    <BundleResource Include="Resources\pomodoro-logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

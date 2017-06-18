@@ -2,7 +2,6 @@
 
 using Xamarin.Forms;
 
-using Pomodoro.Helpers;
 using Pomodoro.Views;
 using Pomodoro.Services.DataStore;
 using System;
@@ -16,8 +15,6 @@ namespace Pomodoro
 
         public static IDictionary<string, string> LoginParameters => null;
 
-        private TimerHelper timer;
-
         public App()
         {
             InitializeComponent();
@@ -27,15 +24,7 @@ namespace Pomodoro
             else
                 DependencyService.Register<CloudDataStore>();
 
-            timer = new TimerHelper();
-            timer.InitTimer(5 * (int)TimeUnitsInSecondsEnum.Second, LogStuff);
-            timer.StartTimer();
-
             SetMainPage();
-        }
-
-        public void LogStuff(object o, EventArgs e) {
-            System.Diagnostics.Debug.WriteLine("Log" + this.timer.ElapsedTime);
         }
 
         public static void SetMainPage()

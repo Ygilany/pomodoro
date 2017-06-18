@@ -93,5 +93,14 @@ namespace Pomodoro.Helpers
 
 			}
         }
+
+		public double TimerProgress
+		{
+			get
+			{
+                return (double)this.elapsedTime/this.duration;
+
+			}
+		}
     }
 }

@@ -10,7 +10,7 @@
                     AbsoluteLayout.LayoutBounds="0.5,0.45,-1,-1"
                     AbsoluteLayout.LayoutFlags="PositionProportional" />
             <ProgressBar x:Name="PomodoroProgressBar"
-                    Progress="0.5" 
+                    Progress="{Binding TimerProgress}" 
                     AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
                     AbsoluteLayout.LayoutFlags="PositionProportional"
                     WidthRequest="300" />

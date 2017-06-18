@@ -20,6 +20,7 @@ namespace Pomodoro.Helpers
 			}
 
 			this.duration = duration;
+            this.elapsedTime = 0;
 			this.OneSecondElapsedHandler = e;
 
             return this;
@@ -28,10 +29,11 @@ namespace Pomodoro.Helpers
         public void Tick(object O, EventArgs e)
         {
             elapsedTime++;
-            OneSecondElapsedHandler.Invoke(O, e);
 			if (elapsedTime > this.duration) {
 				this.StopTimer();
-            }
+            } else {
+				OneSecondElapsedHandler.Invoke(O, e);
+			}
         }
 
 		public void StartTimer()
@@ -41,7 +43,6 @@ namespace Pomodoro.Helpers
 				if (!this.timer.Enabled)
 				{
 					this.timer.Start();
-                    this.elapsedTime = 0;
 				}
 			}
 			else

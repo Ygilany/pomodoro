@@ -29,7 +29,7 @@ namespace Pomodoro.Helpers
         {
             elapsedTime++;
 
-			if (elapsedTime >= this.duration) {
+			if (elapsedTime > this.duration) {
 				this.StopTimer();
             }
         }

@@ -3,12 +3,13 @@ using System.ComponentModel;
 using System.Windows.Input;
 using Pomodoro.Helpers;
 using Xamarin.Forms;
+using Pomodoro.Models;
 
 namespace Pomodoro.ViewModels
 {
     public class PomodoroViewModel : BaseViewModel
     {
-        private readonly TimerHelper timer;
+        private readonly PomodoroMgr Pomodoro;
 
         double progress;
         public double TimerProgress { 
@@ -54,27 +55,19 @@ namespace Pomodoro.ViewModels
 			ElapsedTime = "00:00";
             ToggledBtnImage = "play.png";
 
-			timer = new TimerHelper();
-			timer.InitTimer(5 * (int)TimeUnitsInSecondsEnum.Second, UpdateUI);
+            Pomodoro = new PomodoroMgr(UpdateUI);
+
+			
 
 			TogglePomodoro = new Command(() =>
 			{
-				if (timer.IsEnabled)
-				{
-					timer.StopTimer();
-					ToggledBtnImage = "play.png";
-				}
-				else
-				{
-					timer.StartTimer();
-					ToggledBtnImage = "pause.png";
-				}
+                ToggledBtnImage = Pomodoro.Toggle() ? "pause.png" : "play.png";
 			});
 
             ResetPomodoro = new Command(() =>
 			{
-                timer.ResetTimer();
-				TimerProgress = 0;
+                Pomodoro.Reset();
+                TimerProgress = 0;
 				ElapsedTime = "00:00";
 				ToggledBtnImage = "play.png";
 
@@ -84,8 +77,8 @@ namespace Pomodoro.ViewModels
 
 		public void UpdateUI(object o, EventArgs e)
 		{
-            TimerProgress = this.timer.TimerProgress;
-            ElapsedTime = this.timer.ElapsedTime;
+            TimerProgress = Pomodoro.Timer.TimerProgress;
+            ElapsedTime = Pomodoro.Timer.ElapsedTime;
 		}
     }
 }

@@ -44,7 +44,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\TimeUnitsInMillisecondsEnum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\TimeUnitsInSecondsEnum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Todo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Pomodoro.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PomodoroMgr.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\PomodoroPage.xaml.cs">
       <DependentUpon>PomodoroPage.xaml</DependentUpon>
     </Compile>

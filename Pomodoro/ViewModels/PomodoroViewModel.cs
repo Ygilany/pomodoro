@@ -7,12 +7,33 @@ namespace Pomodoro.ViewModels
     public class PomodoroViewModel : BaseViewModel
     {
 		private TimerHelper timer;
-        public double TimerProgress;
+        double progress;
+        public double TimerProgress { 
+            get{
+                return progress;
+            }
+            set{
+                SetProperty(ref progress, value); 
+            } 
+        }
+        string elapsedTime;
+        public string ElapsedTime { 
+            get
+            {
+                return elapsedTime;
+            }
+            set {
+                SetProperty(ref elapsedTime, value);
+            }
+        }
+
 
 		public PomodoroViewModel () {
             Title = "Pomodoro";
 
-            TimerProgress = 0.5;
+            TimerProgress = 0;
+
+			ElapsedTime = "00:00";
 
 			timer = new TimerHelper();
 			timer.InitTimer(5 * (int)TimeUnitsInSecondsEnum.Second, LogStuff);
@@ -21,11 +42,8 @@ namespace Pomodoro.ViewModels
 
 		public void LogStuff(object o, EventArgs e)
 		{
-			System.Diagnostics.Debug.WriteLine("Log" + this.timer.ElapsedTime);
-			System.Diagnostics.Debug.WriteLine("prog" + this.timer.TimerProgress);
-
-			this.TimerProgress = this.timer.TimerProgress;
-            OnPropertyChanged("TimerProgress");
+            TimerProgress = this.timer.TimerProgress;
+            ElapsedTime = this.timer.ElapsedTime;
 		}
     }
 }

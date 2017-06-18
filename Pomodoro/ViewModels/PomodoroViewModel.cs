@@ -6,7 +6,7 @@ namespace Pomodoro.ViewModels
 {
     public class PomodoroViewModel : BaseViewModel
     {
-		private TimerHelper timer;
+        private readonly TimerHelper timer;
         double progress;
         public double TimerProgress { 
             get{
@@ -32,15 +32,14 @@ namespace Pomodoro.ViewModels
             Title = "Pomodoro";
 
             TimerProgress = 0;
-
 			ElapsedTime = "00:00";
 
 			timer = new TimerHelper();
-			timer.InitTimer(5 * (int)TimeUnitsInSecondsEnum.Second, LogStuff);
+			timer.InitTimer(5 * (int)TimeUnitsInSecondsEnum.Second, UpdateUI);
 			timer.StartTimer();
         }
 
-		public void LogStuff(object o, EventArgs e)
+		public void UpdateUI(object o, EventArgs e)
 		{
             TimerProgress = this.timer.TimerProgress;
             ElapsedTime = this.timer.ElapsedTime;

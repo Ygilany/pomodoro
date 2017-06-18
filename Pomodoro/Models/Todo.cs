@@ -7,8 +7,9 @@ namespace Pomodoro.Models
     {
         public Guid ID { get; set; }
         public string Name { get; set; }
-        public int DurationMin { get; set; }
+        public int DurationMinutes { get; set; }
         public int PomodoroCounter { get; set; }
-        public TimerHelper timer { get; set; }
+        public bool IsComplete { get; set; }
+        public TimerHelper Timer { get; set; }
     }
 }

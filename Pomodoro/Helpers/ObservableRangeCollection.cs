@@ -73,7 +73,7 @@ namespace Pomodoro
         public void RemoveRange(IEnumerable<T> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             foreach (var i in collection)
                 Items.Remove(i);
@@ -94,9 +94,9 @@ namespace Pomodoro
         public void ReplaceRange(IEnumerable<T> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+				throw new ArgumentNullException(nameof(collection));
 
-            Items.Clear();
+			Items.Clear();
             AddRange(collection, NotifyCollectionChangedAction.Reset);
         }
     }

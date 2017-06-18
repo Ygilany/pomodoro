@@ -15,7 +15,7 @@ namespace Pomodoro.Models
         public PomodoroMgr(EventHandler e)
         {
 			Timer = new TimerHelper();
-			Timer.InitTimer(5 * (int)TimeUnitsInSecondsEnum.Second, e);
+            Timer.InitTimer(5 * (int)TimeUnitsInSecondsEnum.Minute, e);
             Tasks = new List<Todo>();
 		}
 

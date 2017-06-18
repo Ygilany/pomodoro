@@ -143,6 +143,9 @@
     <BundleResource Include="Resources\tab_timer.png" />
     <BundleResource Include="Resources\tab_timer%402x.png" />
     <BundleResource Include="Resources\tab_timer%403x.png" />
+    <BundleResource Include="Resources\play.png" />
+    <BundleResource Include="Resources\pause.png" />
+    <BundleResource Include="Resources\reset.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

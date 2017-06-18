@@ -44,7 +44,7 @@
                     Scale="0.5">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
-                            Command="{Binding TogglePomodoro}" />
+                            Command="{Binding ResetPomodoro}" />
                 </Image.GestureRecognizers>
             </Image>
       </AbsoluteLayout>

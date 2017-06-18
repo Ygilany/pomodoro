@@ -66,6 +66,22 @@ namespace Pomodoro.Helpers
 			}
 		}
 
+        public void ResetTimer()
+        {
+			if (this.timer != null)
+			{
+				if (this.timer.Enabled)
+				{
+					this.timer.Stop();
+                    this.elapsedTime = 0;
+				}
+			}
+			else
+			{
+				throw new NullReferenceException("Timer not initialized. You should call initTimer function first!");
+			}
+        }
+
 		public bool IsEnabled
 		{
 			get

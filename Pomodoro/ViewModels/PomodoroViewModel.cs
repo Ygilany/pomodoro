@@ -45,6 +45,7 @@ namespace Pomodoro.ViewModels
 		}
 
 		public ICommand TogglePomodoro { get; }
+		public ICommand ResetPomodoro { get; }
 
 		public PomodoroViewModel () {
             Title = "Pomodoro";
@@ -56,15 +57,28 @@ namespace Pomodoro.ViewModels
 			timer = new TimerHelper();
 			timer.InitTimer(5 * (int)TimeUnitsInSecondsEnum.Second, UpdateUI);
 
-            TogglePomodoro = new Command(() =>{
-                if (timer.IsEnabled) {
+			TogglePomodoro = new Command(() =>
+			{
+				if (timer.IsEnabled)
+				{
 					timer.StopTimer();
-                    ToggledBtnImage = "play.png";
-                } else {
-                    timer.StartTimer();
+					ToggledBtnImage = "play.png";
+				}
+				else
+				{
+					timer.StartTimer();
 					ToggledBtnImage = "pause.png";
 				}
-            });
+			});
+
+            ResetPomodoro = new Command(() =>
+			{
+                timer.ResetTimer();
+				TimerProgress = 0;
+				ElapsedTime = "00:00";
+				ToggledBtnImage = "play.png";
+
+			});
 
 		}
 

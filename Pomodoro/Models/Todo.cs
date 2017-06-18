@@ -7,6 +7,7 @@ namespace Pomodoro.Models
     {
         public Guid ID { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
         public int DurationMinutes { get; set; }
         public int PomodoroCounter { get; set; }
         public bool IsComplete { get; set; }

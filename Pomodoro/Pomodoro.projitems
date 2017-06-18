@@ -43,6 +43,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\TimerHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\TimeUnitsInMillisecondsEnum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\TimeUnitsInSecondsEnum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Todo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Pomodoro.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />

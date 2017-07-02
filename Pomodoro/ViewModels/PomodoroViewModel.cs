@@ -45,6 +45,12 @@ namespace Pomodoro.ViewModels
 			}
 		}
 
+        public string CurrentTask {
+            get {
+                return Pomodoro == null ? Pomodoro.CurrentTask.Name : "Nope" ;
+            }
+        }
+
 		public ICommand TogglePomodoro { get; }
 		public ICommand ResetPomodoro { get; }
 
@@ -57,8 +63,6 @@ namespace Pomodoro.ViewModels
 
             Pomodoro = new PomodoroMgr(UpdateUI);
 
-			
-
 			TogglePomodoro = new Command(() =>
 			{
                 ToggledBtnImage = Pomodoro.Toggle() ? "pause.png" : "play.png";
@@ -70,12 +74,11 @@ namespace Pomodoro.ViewModels
                 TimerProgress = 0;
 				ElapsedTime = "00:00";
 				ToggledBtnImage = "play.png";
-
 			});
 
 		}
 
-		public void UpdateUI(object o, EventArgs e)
+		private void UpdateUI(object o, EventArgs e)
 		{
             TimerProgress = Pomodoro.Timer.TimerProgress;
             ElapsedTime = Pomodoro.Timer.ElapsedTime;

@@ -10,7 +10,7 @@ namespace Pomodoro.Helpers
         int elapsedTime;
         EventHandler OneSecondElapsedHandler;
 
-		public TimerHelper InitTimer(int duration, EventHandler e)
+		public TimerHelper InitTimer(EventHandler callback)
 		{
 			if (this.timer == null)
 			{
@@ -19,9 +19,8 @@ namespace Pomodoro.Helpers
 				this.timer.AutoReset = true;
 			}
 
-			this.duration = duration;
             this.elapsedTime = 0;
-			this.OneSecondElapsedHandler = e;
+            this.OneSecondElapsedHandler = callback;
 
             return this;
 		}
@@ -107,7 +106,6 @@ namespace Pomodoro.Helpers
             get
             {
                 return TimeSpan.FromSeconds(this.elapsedTime).ToString(@"mm\:ss");
-
 			}
         }
 
@@ -116,7 +114,6 @@ namespace Pomodoro.Helpers
 			get
 			{
                 return (double)this.elapsedTime/this.duration;
-
 			}
 		}
     }

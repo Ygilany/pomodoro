@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <AbsoluteLayout>
             <Label  x:Name="TaskName"
-                    Text="The Running Task"
+                    Text="{Binding CurrentTask}"
                     AbsoluteLayout.LayoutBounds="0.5,0.45,-1,-1"
                     AbsoluteLayout.LayoutFlags="PositionProportional" />
             <ProgressBar x:Name="PomodoroProgressBar"
